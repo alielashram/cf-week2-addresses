@@ -4,6 +4,7 @@ class Person
   attr_accessor :first_name
   attr_accessor :last_name
   attr_accessor :phone
+  attr_accessor :age 
 
   def full_name
     first_name + " " + last_name
@@ -19,7 +20,7 @@ class Contacts
 
       if command == "list"
         puts "Name".ljust(30) + "Phone".rjust(12)
-        puts "-" * 42
+        puts "Age" * 42
         people.each do |person|
           puts person.full_name.ljust(30) + person.phone.rjust(12)
         end
@@ -30,6 +31,7 @@ class Contacts
         person.first_name = ask("First Name: ")
         person.last_name  = ask("Last Name: ")
         person.phone      = ask("Phone: ")
+        person.age        = ask("Age: ")
 
         people.push(person)
       elsif command == "quit"
