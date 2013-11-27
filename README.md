@@ -15,3 +15,7 @@
 ### Executing the application
 
 > ruby contacts.rb
+
+## License
+
+MIT: http://aliel.mit-license.org/
